@@ -1,6 +1,9 @@
 # Base Image
 FROM node:latest
 
+# Suppress experimental warnings
+ENV NODE_NO_WARNINGS=1
+
 # Working Dir
 WORKDIR /app
 
