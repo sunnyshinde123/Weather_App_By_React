@@ -15,7 +15,7 @@ pipeline{
             }
         }
         
-        stage("Push image to hub"){
+        stage("Push To Dockerhub"){
             steps{
                 withCredentials([usernamePassword(credentialsId:"dockerhubcred", usernameVariable: "dockerUser", passwordVariable:"dockerPass")]){
                     sh "echo $dockerPass | docker login -u ${env.dockerUser} --password-stdin"
